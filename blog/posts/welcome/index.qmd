@@ -1,11 +1,10 @@
 ---
 title: "Welcome To My Blog"
-author: "Dylan Johnson"
 date: "2024-01-16"
 categories: [news]
 ---
 
-Welcome! I will be sharing some stats-related blog posts on various topics.  
+Welcome! I will be sharing some  blog posts on various topics.  
 
 ![](thumbnail.jpg)
 
