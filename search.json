@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "Welcome! I will be sharing some blog posts on various topics."
-  },
-  {
     "objectID": "posts/post-with-code/REACH_HR_TEST.html",
     "href": "posts/post-with-code/REACH_HR_TEST.html",
     "title": "REACH / IMPACT Initiatives Assessment",
@@ -42,11 +35,11 @@
     "text": "Instructions\nDescribe in detail the various stages involved in successfully completing a complex data project. You are supporting a large household survey data collection in KoboToolbox. As part of this project, you want to develop an algorithm that would identify suspicious behavior of enumerator during data collection.\nYou have it at your disposal. - the raw data from ODK / KoboToolbox, - the clean data - the cleaning log in which cleaning operations are logged (see example in excel Annex 1), - the audit files from ODK / KoboToolbox that logs enumerator behavior during interview administering the interview. Form Audit Log - ODK Docs (getodk.org)\nWe want to identify if there are suspicious surveys (fake interviews for example) in the data collection that is coming: - What are the different stages involved in carrying out such a project?\n\nDownload audit.csv from ODK\nWe could first look at the distribution of the length of interviews. Interviews that are suspiciously short or in the bottom 5% of times taken would be marked for further investigation.\nWe would also look at the location data to compare it with where the respondent is supposed to be. Assuming that the interview was conducted at the respondent’s home, data that was filled in outside of this would be suspicious.\nWe would also look at the distribution of the number of changes to response. Enumerators with an unusually high number could be investigated further, perhaps by performing a text analysis of their reasons for changes.\nAnother way of checking for fake surveys is by conducting back checks. A random 10% of households could be selected to be re-interviewed by a different enumerator. If the survey responses differ markedly from the original survey, this could be evidence of a fraudulent survey.\n\nFor each stage, detail the tasks to be carried out, the methods to be followed, possible avenues and critical points. - Thoroughly justify your choices.\n\nAfter downloading audit.csv, a duration variable could be created that is difference between the end and start times of the survey. The elapsed time is accurate even in the start and end timestamps aren’t as mentioned in Form Audit Log - ODK Docs (getodk.org). A histogram of the duration could be be plotted. Surveys with times in the bottom 10%, for example, could be checked to see whether the answers are sensible, how many skipped questions there are, etc. This could indicate whether an enumerator is simply rushing through a survey without regard to skip patterns or filling in responses at random.\nFor the location data, the GPS coordinates of where the survey was meant to be conducted can be checked against the location where it was actually done. The downside of this is that if the device shuts off or location data is not turned on, this would make it hard to know whether the survey was done at the appropriate location\nFor the number of changed responses, we could compute the number of changed responses per survey and plot a histogram of the result. Those in the highest 10%, for example, could be set aside for further investigation. We could look at the reasons for the changes and compare those with surveys that are closer to the median.\nFinally, for the back check portion, we can randomly sample a subset of interview IDs to be re-interviewed. A trusted enumerator, preferably separate from the rest of the team, will then be sent to re-interview those households using the entire questionnaire or only the questions of concern. The answers will be compared to those from the first survey. One way to compare is to use the bcstats tool developed by Innovations for Poverty Action https://github.com/PovertyAction/ipabcstats. For more information about back check procecdures, see https://dimewiki.worldbank.org/Back_Checks."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "A few notes",
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
     "section": "",
-    "text": "REACH / IMPACT Initiatives Assessment\n\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\ninterview\n\n\n\n\n\n\n\n\n\n\n\nJan 18, 2024\n\n\n\n\n\n\n  \n\n\n\n\nGiveDirectly Assessment\n\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\ninterview\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2024\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome! I will be sharing some blog posts on various topics."
   },
   {
     "objectID": "about.html",
@@ -54,6 +47,13 @@
     "title": "About",
     "section": "",
     "text": "A few notes"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "A few notes",
+    "section": "",
+    "text": "REACH / IMPACT Initiatives Assessment\n\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\ninterview\n\n\n\n\n\n\n\n\n\n\n\nJan 18, 2024\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2024\n\n\n\n\n\n\n  \n\n\n\n\nGiveDirectly Assessment\n\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\ninterview\n\n\n\n\n\n\n\n\n\n\n\nJan 16, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/give-directly-assessment.html",
