@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2024-01-16">
+
+<title>A few notes - GiveDirectly Assessment</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">A few notes</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/dcjohnson24" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">GiveDirectly Assessment</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">code</div>
+                <div class="quarto-category">analysis</div>
+                <div class="quarto-category">interview</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 16, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="givedirectly-take-home-assessment" class="level1">
+<h1>GiveDirectly Take Home Assessment</h1>
+<p>This was a take home assessment I did for GiveDirectly in June 2022. I was given 2.5 hours to complete the assignment. The csv files and instructions can be found <a href="https://github.com/dcjohnson24/give-directly-interview">here</a>.</p>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<ol type="1">
+<li>Please evaluate the data in <code>recipients.csv</code> and <code>survey_attempts.csv</code> to answer the following questions:
+<ol type="1">
+<li>How many recipients are in each of the four stages?&nbsp;Please provide the calculation(s) in the spreadsheet or code that you submit.</li>
+<li>How many surveys were successfully completed in December, 2020?&nbsp;Please provide the calculation(s) in the spreadsheet or code that you submit.</li>
+<li>Did you find any abnormalities in the source data? If so, how did you account for them in your analysis?</li>
+</ol></li>
+</ol>
+<p>First install the required packages.</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>r requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Requirement already satisfied: pandas==1.4.2 in ./.venv/lib/python3.8/site-packages (from -r requirements.txt (line 1)) (1.4.2)
+Requirement already satisfied: jupyterlab==3.4.2 in ./.venv/lib/python3.8/site-packages (from -r requirements.txt (line 2)) (3.4.2)
+Requirement already satisfied: matplotlib==3.5.2 in ./.venv/lib/python3.8/site-packages (from -r requirements.txt (line 3)) (3.5.2)
+Requirement already satisfied: ipython==8.4.0 in ./.venv/lib/python3.8/site-packages (from -r requirements.txt (line 4)) (8.4.0)
+Requirement already satisfied: flake8==4.0.1 in ./.venv/lib/python3.8/site-packages (from -r requirements.txt (line 5)) (4.0.1)
+Requirement already satisfied: PyQt5==5.15.6 in ./.venv/lib/python3.8/site-packages (from -r requirements.txt (line 6)) (5.15.6)
+Requirement already satisfied: statsmodels==0.13.2 in ./.venv/lib/python3.8/site-packages (from -r requirements.txt (line 7)) (0.13.2)
+Requirement already satisfied: ipykernel==6.13.0 in ./.venv/lib/python3.8/site-packages (from -r requirements.txt (line 8)) (6.13.0)
+Requirement already satisfied: missingno==0.5.1 in ./.venv/lib/python3.8/site-packages (from -r requirements.txt (line 9)) (0.5.1)
+Requirement already satisfied: scikit-learn==1.1.1 in ./.venv/lib/python3.8/site-packages (from -r requirements.txt (line 10)) (1.1.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in ./.venv/lib/python3.8/site-packages (from pandas==1.4.2-&gt;-r requirements.txt (line 1)) (2.8.2)
+Requirement already satisfied: numpy&gt;=1.18.5; platform_machine != "aarch64" and platform_machine != "arm64" and python_version &lt; "3.10" in ./.venv/lib/python3.8/site-packages (from pandas==1.4.2-&gt;-r requirements.txt (line 1)) (1.22.4)
+Requirement already satisfied: pytz&gt;=2020.1 in ./.venv/lib/python3.8/site-packages (from pandas==1.4.2-&gt;-r requirements.txt (line 1)) (2022.1)
+Requirement already satisfied: packaging in ./.venv/lib/python3.8/site-packages (from jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (21.3)
+Requirement already satisfied: jupyter-server~=1.16 in ./.venv/lib/python3.8/site-packages (from jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (1.17.0)
+Requirement already satisfied: tornado&gt;=6.1.0 in ./.venv/lib/python3.8/site-packages (from jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (6.1)
+Requirement already satisfied: jupyter-core in ./.venv/lib/python3.8/site-packages (from jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (4.10.0)
+Requirement already satisfied: jinja2&gt;=2.1 in ./.venv/lib/python3.8/site-packages (from jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (3.1.2)
+Requirement already satisfied: nbclassic~=0.2 in ./.venv/lib/python3.8/site-packages (from jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (0.3.7)
+Requirement already satisfied: jupyterlab-server~=2.10 in ./.venv/lib/python3.8/site-packages (from jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (2.14.0)
+Requirement already satisfied: pillow&gt;=6.2.0 in ./.venv/lib/python3.8/site-packages (from matplotlib==3.5.2-&gt;-r requirements.txt (line 3)) (9.1.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in ./.venv/lib/python3.8/site-packages (from matplotlib==3.5.2-&gt;-r requirements.txt (line 3)) (4.33.3)
+Requirement already satisfied: pyparsing&gt;=2.2.1 in ./.venv/lib/python3.8/site-packages (from matplotlib==3.5.2-&gt;-r requirements.txt (line 3)) (3.0.9)
+Requirement already satisfied: cycler&gt;=0.10 in ./.venv/lib/python3.8/site-packages (from matplotlib==3.5.2-&gt;-r requirements.txt (line 3)) (0.11.0)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in ./.venv/lib/python3.8/site-packages (from matplotlib==3.5.2-&gt;-r requirements.txt (line 3)) (1.4.2)
+Requirement already satisfied: pickleshare in ./.venv/lib/python3.8/site-packages (from ipython==8.4.0-&gt;-r requirements.txt (line 4)) (0.7.5)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in ./.venv/lib/python3.8/site-packages (from ipython==8.4.0-&gt;-r requirements.txt (line 4)) (3.0.29)
+Requirement already satisfied: traitlets&gt;=5 in ./.venv/lib/python3.8/site-packages (from ipython==8.4.0-&gt;-r requirements.txt (line 4)) (5.2.2.post1)
+Requirement already satisfied: backcall in ./.venv/lib/python3.8/site-packages (from ipython==8.4.0-&gt;-r requirements.txt (line 4)) (0.2.0)
+Requirement already satisfied: pygments&gt;=2.4.0 in ./.venv/lib/python3.8/site-packages (from ipython==8.4.0-&gt;-r requirements.txt (line 4)) (2.12.0)
+Requirement already satisfied: jedi&gt;=0.16 in ./.venv/lib/python3.8/site-packages (from ipython==8.4.0-&gt;-r requirements.txt (line 4)) (0.18.1)
+Requirement already satisfied: pexpect&gt;4.3; sys_platform != "win32" in ./.venv/lib/python3.8/site-packages (from ipython==8.4.0-&gt;-r requirements.txt (line 4)) (4.8.0)
+Requirement already satisfied: setuptools&gt;=18.5 in ./.venv/lib/python3.8/site-packages (from ipython==8.4.0-&gt;-r requirements.txt (line 4)) (44.0.0)
+Requirement already satisfied: decorator in ./.venv/lib/python3.8/site-packages (from ipython==8.4.0-&gt;-r requirements.txt (line 4)) (5.1.1)
+Requirement already satisfied: matplotlib-inline in ./.venv/lib/python3.8/site-packages (from ipython==8.4.0-&gt;-r requirements.txt (line 4)) (0.1.3)
+Requirement already satisfied: stack-data in ./.venv/lib/python3.8/site-packages (from ipython==8.4.0-&gt;-r requirements.txt (line 4)) (0.2.0)
+Requirement already satisfied: pyflakes&lt;2.5.0,&gt;=2.4.0 in ./.venv/lib/python3.8/site-packages (from flake8==4.0.1-&gt;-r requirements.txt (line 5)) (2.4.0)
+Requirement already satisfied: mccabe&lt;0.7.0,&gt;=0.6.0 in ./.venv/lib/python3.8/site-packages (from flake8==4.0.1-&gt;-r requirements.txt (line 5)) (0.6.1)
+Requirement already satisfied: pycodestyle&lt;2.9.0,&gt;=2.8.0 in ./.venv/lib/python3.8/site-packages (from flake8==4.0.1-&gt;-r requirements.txt (line 5)) (2.8.0)
+Requirement already satisfied: PyQt5-Qt5&gt;=5.15.2 in ./.venv/lib/python3.8/site-packages (from PyQt5==5.15.6-&gt;-r requirements.txt (line 6)) (5.15.2)
+Requirement already satisfied: PyQt5-sip&lt;13,&gt;=12.8 in ./.venv/lib/python3.8/site-packages (from PyQt5==5.15.6-&gt;-r requirements.txt (line 6)) (12.10.1)
+Requirement already satisfied: patsy&gt;=0.5.2 in ./.venv/lib/python3.8/site-packages (from statsmodels==0.13.2-&gt;-r requirements.txt (line 7)) (0.5.2)
+Requirement already satisfied: scipy&gt;=1.3 in ./.venv/lib/python3.8/site-packages (from statsmodels==0.13.2-&gt;-r requirements.txt (line 7)) (1.8.1)
+Requirement already satisfied: debugpy&gt;=1.0 in ./.venv/lib/python3.8/site-packages (from ipykernel==6.13.0-&gt;-r requirements.txt (line 8)) (1.6.0)
+Requirement already satisfied: jupyter-client&gt;=6.1.12 in ./.venv/lib/python3.8/site-packages (from ipykernel==6.13.0-&gt;-r requirements.txt (line 8)) (7.3.1)
+Requirement already satisfied: nest-asyncio in ./.venv/lib/python3.8/site-packages (from ipykernel==6.13.0-&gt;-r requirements.txt (line 8)) (1.5.5)
+Requirement already satisfied: psutil in ./.venv/lib/python3.8/site-packages (from ipykernel==6.13.0-&gt;-r requirements.txt (line 8)) (5.9.1)
+Requirement already satisfied: seaborn in ./.venv/lib/python3.8/site-packages (from missingno==0.5.1-&gt;-r requirements.txt (line 9)) (0.11.2)
+Requirement already satisfied: joblib&gt;=1.0.0 in ./.venv/lib/python3.8/site-packages (from scikit-learn==1.1.1-&gt;-r requirements.txt (line 10)) (1.1.0)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in ./.venv/lib/python3.8/site-packages (from scikit-learn==1.1.1-&gt;-r requirements.txt (line 10)) (3.1.0)
+Requirement already satisfied: six&gt;=1.5 in ./.venv/lib/python3.8/site-packages (from python-dateutil&gt;=2.8.1-&gt;pandas==1.4.2-&gt;-r requirements.txt (line 1)) (1.16.0)
+Requirement already satisfied: terminado&gt;=0.8.3 in ./.venv/lib/python3.8/site-packages (from jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (0.15.0)
+Requirement already satisfied: anyio&lt;4,&gt;=3.1.0 in ./.venv/lib/python3.8/site-packages (from jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (3.6.1)
+Requirement already satisfied: nbconvert&gt;=6.4.4 in ./.venv/lib/python3.8/site-packages (from jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (6.5.0)
+Requirement already satisfied: Send2Trash in ./.venv/lib/python3.8/site-packages (from jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (1.8.0)
+Requirement already satisfied: websocket-client in ./.venv/lib/python3.8/site-packages (from jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (1.3.2)
+Requirement already satisfied: pyzmq&gt;=17 in ./.venv/lib/python3.8/site-packages (from jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (23.1.0)
+Requirement already satisfied: argon2-cffi in ./.venv/lib/python3.8/site-packages (from jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (21.3.0)
+Requirement already satisfied: prometheus-client in ./.venv/lib/python3.8/site-packages (from jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (0.14.1)
+Requirement already satisfied: nbformat&gt;=5.2.0 in ./.venv/lib/python3.8/site-packages (from jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (5.4.0)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in ./.venv/lib/python3.8/site-packages (from jinja2&gt;=2.1-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (2.1.1)
+Requirement already satisfied: notebook-shim&gt;=0.1.0 in ./.venv/lib/python3.8/site-packages (from nbclassic~=0.2-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (0.1.0)
+Requirement already satisfied: notebook&lt;7 in ./.venv/lib/python3.8/site-packages (from nbclassic~=0.2-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (6.4.11)
+Requirement already satisfied: babel in ./.venv/lib/python3.8/site-packages (from jupyterlab-server~=2.10-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (2.10.1)
+Requirement already satisfied: json5 in ./.venv/lib/python3.8/site-packages (from jupyterlab-server~=2.10-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (0.9.8)
+Requirement already satisfied: jsonschema&gt;=3.0.1 in ./.venv/lib/python3.8/site-packages (from jupyterlab-server~=2.10-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (4.6.0)
+Requirement already satisfied: requests in ./.venv/lib/python3.8/site-packages (from jupyterlab-server~=2.10-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (2.27.1)
+Requirement already satisfied: importlib-metadata&gt;=3.6; python_version &lt; "3.10" in ./.venv/lib/python3.8/site-packages (from jupyterlab-server~=2.10-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (4.11.4)
+Requirement already satisfied: wcwidth in ./.venv/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython==8.4.0-&gt;-r requirements.txt (line 4)) (0.2.5)
+Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.0 in ./.venv/lib/python3.8/site-packages (from jedi&gt;=0.16-&gt;ipython==8.4.0-&gt;-r requirements.txt (line 4)) (0.8.3)
+Requirement already satisfied: ptyprocess&gt;=0.5 in ./.venv/lib/python3.8/site-packages (from pexpect&gt;4.3; sys_platform != "win32"-&gt;ipython==8.4.0-&gt;-r requirements.txt (line 4)) (0.7.0)
+Requirement already satisfied: pure-eval in ./.venv/lib/python3.8/site-packages (from stack-data-&gt;ipython==8.4.0-&gt;-r requirements.txt (line 4)) (0.2.2)
+Requirement already satisfied: asttokens in ./.venv/lib/python3.8/site-packages (from stack-data-&gt;ipython==8.4.0-&gt;-r requirements.txt (line 4)) (2.0.5)
+Requirement already satisfied: executing in ./.venv/lib/python3.8/site-packages (from stack-data-&gt;ipython==8.4.0-&gt;-r requirements.txt (line 4)) (0.8.3)
+Requirement already satisfied: entrypoints in ./.venv/lib/python3.8/site-packages (from jupyter-client&gt;=6.1.12-&gt;ipykernel==6.13.0-&gt;-r requirements.txt (line 8)) (0.4)
+Requirement already satisfied: sniffio&gt;=1.1 in ./.venv/lib/python3.8/site-packages (from anyio&lt;4,&gt;=3.1.0-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (1.2.0)
+Requirement already satisfied: idna&gt;=2.8 in ./.venv/lib/python3.8/site-packages (from anyio&lt;4,&gt;=3.1.0-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (3.3)
+Requirement already satisfied: nbclient&gt;=0.5.0 in ./.venv/lib/python3.8/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (0.6.4)
+Requirement already satisfied: jupyterlab-pygments in ./.venv/lib/python3.8/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (0.2.2)
+Requirement already satisfied: tinycss2 in ./.venv/lib/python3.8/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (1.1.1)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in ./.venv/lib/python3.8/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (1.5.0)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in ./.venv/lib/python3.8/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (0.8.4)
+Requirement already satisfied: defusedxml in ./.venv/lib/python3.8/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (0.7.1)
+Requirement already satisfied: beautifulsoup4 in ./.venv/lib/python3.8/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (4.11.1)
+Requirement already satisfied: bleach in ./.venv/lib/python3.8/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (5.0.0)
+Requirement already satisfied: argon2-cffi-bindings in ./.venv/lib/python3.8/site-packages (from argon2-cffi-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (21.2.0)
+Requirement already satisfied: fastjsonschema in ./.venv/lib/python3.8/site-packages (from nbformat&gt;=5.2.0-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (2.15.3)
+Requirement already satisfied: ipython-genutils in ./.venv/lib/python3.8/site-packages (from notebook&lt;7-&gt;nbclassic~=0.2-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (0.2.0)
+Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,&gt;=0.14.0 in ./.venv/lib/python3.8/site-packages (from jsonschema&gt;=3.0.1-&gt;jupyterlab-server~=2.10-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (0.18.1)
+Requirement already satisfied: importlib-resources&gt;=1.4.0; python_version &lt; "3.9" in ./.venv/lib/python3.8/site-packages (from jsonschema&gt;=3.0.1-&gt;jupyterlab-server~=2.10-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (5.7.1)
+Requirement already satisfied: attrs&gt;=17.4.0 in ./.venv/lib/python3.8/site-packages (from jsonschema&gt;=3.0.1-&gt;jupyterlab-server~=2.10-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (21.4.0)
+Requirement already satisfied: certifi&gt;=2017.4.17 in ./.venv/lib/python3.8/site-packages (from requests-&gt;jupyterlab-server~=2.10-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (2022.5.18.1)
+Requirement already satisfied: charset-normalizer~=2.0.0; python_version &gt;= "3" in ./.venv/lib/python3.8/site-packages (from requests-&gt;jupyterlab-server~=2.10-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (2.0.12)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in ./.venv/lib/python3.8/site-packages (from requests-&gt;jupyterlab-server~=2.10-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (1.26.9)
+Requirement already satisfied: zipp&gt;=0.5 in ./.venv/lib/python3.8/site-packages (from importlib-metadata&gt;=3.6; python_version &lt; "3.10"-&gt;jupyterlab-server~=2.10-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (3.8.0)
+Requirement already satisfied: webencodings&gt;=0.4 in ./.venv/lib/python3.8/site-packages (from tinycss2-&gt;nbconvert&gt;=6.4.4-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (0.5.1)
+Requirement already satisfied: soupsieve&gt;1.2 in ./.venv/lib/python3.8/site-packages (from beautifulsoup4-&gt;nbconvert&gt;=6.4.4-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (2.3.2.post1)
+Requirement already satisfied: cffi&gt;=1.0.1 in ./.venv/lib/python3.8/site-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (1.15.0)
+Requirement already satisfied: pycparser in ./.venv/lib/python3.8/site-packages (from cffi&gt;=1.0.1-&gt;argon2-cffi-bindings-&gt;argon2-cffi-&gt;jupyter-server~=1.16-&gt;jupyterlab==3.4.2-&gt;-r requirements.txt (line 2)) (2.21)</code></pre>
+</div>
+</div>
+<p>Import the required libraries.</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> LabelEncoder, StandardScaler</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>matplotlib.use(<span class="st">'QtAgg'</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.stats.weightstats <span class="im">import</span> CompareMeans</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> missingno <span class="im">as</span> msno</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.experimental <span class="im">import</span> enable_iterative_imputer</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.impute <span class="im">import</span> IterativeImputer</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegressionCV</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> ExtraTreesClassifier, ExtraTreesRegressor</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> defaultdict</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s now import the two datasets and merge them.</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>recipients <span class="op">=</span> pd.read_csv(<span class="st">'recipients.csv'</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>attempts <span class="op">=</span> pd.read_csv(<span class="st">'survey_attempts.csv'</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>merged <span class="op">=</span> pd.merge(recipients, attempts, on<span class="op">=</span><span class="st">'recipient_id'</span>, how<span class="op">=</span><span class="st">'left'</span>, indicator<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>merged._merge.value_counts(dropna<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>both          520
+left_only       0
+right_only      0
+Name: _merge, dtype: int64</code></pre>
+</div>
+</div>
+<p>It looks like all the recipients are matched with survey attempts. We can drop the <code>_merge</code> variable.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>merged.drop(columns<span class="op">=</span><span class="st">'_merge'</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A quick glance at our data.</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>merged.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">recipient_id</th>
+<th data-quarto-table-cell-role="th">county</th>
+<th data-quarto-table-cell-role="th">time_county</th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">account_number</th>
+<th data-quarto-table-cell-role="th">account_status</th>
+<th data-quarto-table-cell-role="th">survey_id</th>
+<th data-quarto-table-cell-role="th">date</th>
+<th data-quarto-table-cell-role="th">success</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>r-00085</td>
+<td>County B</td>
+<td>22.0</td>
+<td>22.0</td>
+<td>100000022.0</td>
+<td>NaN</td>
+<td>s-000342</td>
+<td>12/23/20</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>r-00085</td>
+<td>County B</td>
+<td>22.0</td>
+<td>22.0</td>
+<td>100000022.0</td>
+<td>NaN</td>
+<td>s-000448</td>
+<td>11/25/20</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>r-00082</td>
+<td>County C</td>
+<td>29.0</td>
+<td>31.0</td>
+<td>100000023.0</td>
+<td>Not Active</td>
+<td>s-000151</td>
+<td>12/20/20</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>r-00082</td>
+<td>County C</td>
+<td>29.0</td>
+<td>31.0</td>
+<td>100000023.0</td>
+<td>Not Active</td>
+<td>s-000305</td>
+<td>11/22/20</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>r-00048</td>
+<td>County C</td>
+<td>22.0</td>
+<td>24.0</td>
+<td>100000035.0</td>
+<td>Active</td>
+<td>s-000108</td>
+<td>11/28/20</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>r-00048</td>
+<td>County C</td>
+<td>22.0</td>
+<td>24.0</td>
+<td>100000035.0</td>
+<td>Active</td>
+<td>s-000116</td>
+<td>01/17/21</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>r-00048</td>
+<td>County C</td>
+<td>22.0</td>
+<td>24.0</td>
+<td>100000035.0</td>
+<td>Active</td>
+<td>s-000439</td>
+<td>11/18/20</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>r-00096</td>
+<td>County B</td>
+<td>22.0</td>
+<td>25.0</td>
+<td>100000166.0</td>
+<td>Active</td>
+<td>s-000077</td>
+<td>11/06/20</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>r-00096</td>
+<td>County B</td>
+<td>22.0</td>
+<td>25.0</td>
+<td>100000166.0</td>
+<td>Active</td>
+<td>s-000130</td>
+<td>01/03/21</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>r-00064</td>
+<td>County D</td>
+<td>24.0</td>
+<td>26.0</td>
+<td>100000076.0</td>
+<td>Active</td>
+<td>s-000352</td>
+<td>11/04/20</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Check for duplicates. We expect that <code>recipient_id</code> and <code>survey_id</code> together form a unique id.</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>merged[merged.duplicated(subset<span class="op">=</span>[<span class="st">'recipient_id'</span>, <span class="st">'survey_id'</span>], keep<span class="op">=</span><span class="va">False</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">recipient_id</th>
+<th data-quarto-table-cell-role="th">county</th>
+<th data-quarto-table-cell-role="th">time_county</th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">account_number</th>
+<th data-quarto-table-cell-role="th">account_status</th>
+<th data-quarto-table-cell-role="th">survey_id</th>
+<th data-quarto-table-cell-role="th">date</th>
+<th data-quarto-table-cell-role="th">success</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">15</td>
+<td>r-00100</td>
+<td>County C</td>
+<td>30.0</td>
+<td>32.0</td>
+<td>100000107.0</td>
+<td>Active</td>
+<td>s-000045</td>
+<td>11/10/20</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">17</td>
+<td>r-00100</td>
+<td>County C</td>
+<td>30.0</td>
+<td>32.0</td>
+<td>100000107.0</td>
+<td>Active</td>
+<td>s-000045</td>
+<td>11/10/20</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">19</td>
+<td>r-00030</td>
+<td>County C</td>
+<td>23.0</td>
+<td>26.0</td>
+<td>100000179.0</td>
+<td>Active</td>
+<td>s-000036</td>
+<td>11/10/20</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">22</td>
+<td>r-00030</td>
+<td>County C</td>
+<td>23.0</td>
+<td>26.0</td>
+<td>100000179.0</td>
+<td>Active</td>
+<td>s-000036</td>
+<td>11/10/20</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">28</td>
+<td>r-00193</td>
+<td>County B</td>
+<td>10.0</td>
+<td>62.0</td>
+<td>100000977.0</td>
+<td>Active</td>
+<td>s-000018</td>
+<td>01/22/21</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">506</td>
+<td>r-00191</td>
+<td>County B</td>
+<td>10.0</td>
+<td>62.0</td>
+<td>100000126.0</td>
+<td>Active</td>
+<td>s-000026</td>
+<td>12/11/20</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">510</td>
+<td>r-00036</td>
+<td>County C</td>
+<td>32.0</td>
+<td>32.0</td>
+<td>100000183.0</td>
+<td>Active</td>
+<td>s-000003</td>
+<td>11/16/20</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">513</td>
+<td>r-00036</td>
+<td>County C</td>
+<td>32.0</td>
+<td>32.0</td>
+<td>100000183.0</td>
+<td>Active</td>
+<td>s-000003</td>
+<td>11/16/20</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">518</td>
+<td>r-00122</td>
+<td>County A</td>
+<td>8.0</td>
+<td>49.0</td>
+<td>100000013.0</td>
+<td>Not Active</td>
+<td>s-000005</td>
+<td>01/29/21</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">519</td>
+<td>r-00122</td>
+<td>County A</td>
+<td>8.0</td>
+<td>49.0</td>
+<td>100000013.0</td>
+<td>Not Active</td>
+<td>s-000005</td>
+<td>01/29/21</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+
+<p>100 rows × 9 columns</p>
+</div>
+</div>
+</div>
+<p>There are 50 pairs of duplicates that need to be dropped.</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>merged <span class="op">=</span> merged.drop_duplicates(subset<span class="op">=</span>[<span class="st">'recipient_id'</span>, <span class="st">'survey_id'</span>], keep<span class="op">=</span><span class="st">'first'</span>).reset_index(drop<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s now calculate the stage variable, starting with ‘Start’.</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> merged.groupby(<span class="st">'recipient_id'</span>)[<span class="st">'success'</span>].<span class="bu">any</span>()</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>one_success <span class="op">=</span> [mask.index[i] <span class="cf">for</span> i, m <span class="kw">in</span> <span class="bu">enumerate</span>(mask) <span class="cf">if</span> m]</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the value to start for those with no successful surveys. '~' negates the value </span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># of the mask. In this case, '~' means find those without any successful survey</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>merged.loc[<span class="op">~</span>merged.recipient_id.isin(one_success), <span class="st">'stage'</span>] <span class="op">=</span> <span class="st">'Start'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Next, the ‘Ineligible’ stage</p>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove the text 'County' from the column</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>merged.county <span class="op">=</span> merged.county.<span class="bu">str</span>.replace(<span class="st">'County '</span>, <span class="st">''</span>, regex<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>inABC <span class="op">=</span> merged.county.isin([<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>])</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>recipient_noABC <span class="op">=</span> merged.recipient_id[<span class="op">~</span>inABC]</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>merged.loc[merged.recipient_id.isin(one_success) <span class="op">&amp;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    merged.recipient_id.isin(recipient_noABC), <span class="st">'stage'</span>] <span class="op">=</span> <span class="st">'Ineligible'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The ‘Review’ stage</p>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>recipient_yesABC <span class="op">=</span> merged.recipient_id[inABC]</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>notActive <span class="op">=</span> merged.account_status <span class="op">==</span> <span class="st">'Not Active'</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>recipient_notActive <span class="op">=</span> merged.recipient_id[notActive]</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>merged.loc[merged.recipient_id.isin(one_success) <span class="op">&amp;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>           merged.recipient_id.isin(recipient_yesABC) <span class="op">&amp;</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>           merged.recipient_id.isin(recipient_notActive),</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>           <span class="st">'stage'</span>] <span class="op">=</span> <span class="st">'Review'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>And finally the ‘Pay’ stage</p>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>active <span class="op">=</span> merged.account_status <span class="op">==</span> <span class="st">'Active'</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>recipient_active <span class="op">=</span> merged.recipient_id[active]</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>merged.loc[merged.recipient_id.isin(one_success) <span class="op">&amp;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>           merged.recipient_id.isin(recipient_yesABC) <span class="op">&amp;</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>           merged.recipient_id.isin(recipient_active), <span class="st">'stage'</span>] <span class="op">=</span> <span class="st">'Pay'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="how-many-recipients-in-each-stage" class="level3">
+<h3 class="anchored" data-anchor-id="how-many-recipients-in-each-stage">1.1 How many recipients in each stage?</h3>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>merged.stage.value_counts(dropna<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<pre><code>Pay           209
+Start         150
+Ineligible     70
+Review         35
+NaN             6
+Name: stage, dtype: int64</code></pre>
+</div>
+</div>
+<p>There are 209 in the ‘Pay’ stage, 150 in the ‘Start’, 70 ‘Ineligible’, 35 in ‘Review’, and 6 not in any stage. This is because there are 6 recipients with a missing <code>account_status</code>.</p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>merged.loc[merged.stage.isna()]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">recipient_id</th>
+<th data-quarto-table-cell-role="th">county</th>
+<th data-quarto-table-cell-role="th">time_county</th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">account_number</th>
+<th data-quarto-table-cell-role="th">account_status</th>
+<th data-quarto-table-cell-role="th">survey_id</th>
+<th data-quarto-table-cell-role="th">date</th>
+<th data-quarto-table-cell-role="th">success</th>
+<th data-quarto-table-cell-role="th">stage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>r-00085</td>
+<td>B</td>
+<td>22.0</td>
+<td>22.0</td>
+<td>100000022.0</td>
+<td>NaN</td>
+<td>s-000342</td>
+<td>12/23/20</td>
+<td>True</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>r-00085</td>
+<td>B</td>
+<td>22.0</td>
+<td>22.0</td>
+<td>100000022.0</td>
+<td>NaN</td>
+<td>s-000448</td>
+<td>11/25/20</td>
+<td>False</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>r-00145</td>
+<td>A</td>
+<td>22.0</td>
+<td>24.0</td>
+<td>100000089.0</td>
+<td>NaN</td>
+<td>s-000137</td>
+<td>12/21/20</td>
+<td>True</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50</td>
+<td>r-00045</td>
+<td>C</td>
+<td>26.0</td>
+<td>30.0</td>
+<td>100000199.0</td>
+<td>NaN</td>
+<td>s-000161</td>
+<td>11/25/20</td>
+<td>False</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">51</td>
+<td>r-00045</td>
+<td>C</td>
+<td>26.0</td>
+<td>30.0</td>
+<td>100000199.0</td>
+<td>NaN</td>
+<td>s-000236</td>
+<td>11/15/20</td>
+<td>False</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">52</td>
+<td>r-00045</td>
+<td>C</td>
+<td>26.0</td>
+<td>30.0</td>
+<td>100000199.0</td>
+<td>NaN</td>
+<td>s-000337</td>
+<td>01/14/21</td>
+<td>True</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>We will impute a value for recipients with a missing <code>account_status</code>, but it could be worthwhile to follow up with someone for the appropriate status.</p>
+</section>
+<section id="how-many-successful-surveys-in-december" class="level3">
+<h3 class="anchored" data-anchor-id="how-many-successful-surveys-in-december">1.2 How many successful surveys in December?</h3>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>merged[<span class="st">'month'</span>] <span class="op">=</span> merged[<span class="st">'date'</span>].astype(<span class="bu">str</span>).<span class="bu">str</span>[:<span class="dv">2</span>]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>merged.groupby(<span class="st">'month'</span>)[<span class="st">'success'</span>].<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>month
+01    77
+11     0
+12    93
+Name: success, dtype: int64</code></pre>
+</div>
+</div>
+<p>There were 93 successful surveys in December.</p>
+</section>
+<section id="abnormalities-in-the-source-data" class="level3">
+<h3 class="anchored" data-anchor-id="abnormalities-in-the-source-data">1.3 Abnormalities in the source data</h3>
+<p>There were duplicates in the data that had to be dropped. Some values also did not make much sense and were assgined missing value. The missing data was later imputed.</p>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>merged.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">time_county</th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">account_number</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>455.000000</td>
+<td>460.000000</td>
+<td>4.630000e+02</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>19.138462</td>
+<td>124.126087</td>
+<td>1.000001e+08</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>10.501550</td>
+<td>925.986058</td>
+<td>1.074233e+02</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>-45.000000</td>
+<td>20.000000</td>
+<td>1.000000e+08</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>10.000000</td>
+<td>25.000000</td>
+<td>1.000001e+08</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>21.000000</td>
+<td>32.000000</td>
+<td>1.000001e+08</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>28.000000</td>
+<td>51.000000</td>
+<td>1.000002e+08</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>35.000000</td>
+<td>9999.000000</td>
+<td>1.000010e+08</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><code>time_county</code> has a minimum of -45 and <code>age</code> has a max of 9999. To deal with these problematic cases, I replace them with missing values to be imputed later. It could also be good to follow up with other teams on the correct value.</p>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>merged.age[merged.age <span class="op">==</span> <span class="dv">9999</span>] <span class="op">=</span> pd.np.nan </span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>merged.time_county[merged.time_county <span class="op">&lt;</span> <span class="dv">0</span>] <span class="op">=</span> pd.np.nan</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/tmp/ipykernel_14671/1017566221.py:1: FutureWarning: The pandas.np module is deprecated and will be removed from pandas in a future version. Import numpy directly instead.
+  merged.age[merged.age == 9999] = pd.np.nan
+/tmp/ipykernel_14671/1017566221.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  merged.age[merged.age == 9999] = pd.np.nan
+/tmp/ipykernel_14671/1017566221.py:2: FutureWarning: The pandas.np module is deprecated and will be removed from pandas in a future version. Import numpy directly instead.
+  merged.time_county[merged.time_county &lt; 0] = pd.np.nan
+/tmp/ipykernel_14671/1017566221.py:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  merged.time_county[merged.time_county &lt; 0] = pd.np.nan</code></pre>
+</div>
+</div>
+<p>There are missing values in the data as well. Six columns have missing data.</p>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>merged.isna().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+<pre><code>recipient_id       0
+county             8
+time_county       20
+age               14
+account_number     7
+account_status    13
+survey_id          0
+date               0
+success            0
+stage              6
+month              0
+dtype: int64</code></pre>
+</div>
+</div>
+<p>Missing data is usually deleted or imputed. Deleting missing data is easiest, but it can lead to biases if the data is not missing at random. If <code>age</code> is more likely to be missing in certain counties, for example, deleting missing data isn’t the best approach. If the data is missing completely at random or missing at random, it can be deleted.</p>
+<p>If there are many missing values in a row, the row can be deleted. Likewise, if there are many missing values in a column, the column can be deleted.</p>
+<p>Imputation can be as simple as replacing the missing value in a column with an arbitrary value such as ‘0’ or the column mean or mode. Other techniques take into account the values in other columns. Suppose a recipient has a missing <code>age</code>, but lives in a certain county and has also responded to the survey. Then the <code>age</code> might be imputed to be slightly lower because of a correlation between <code>success</code> and <code>age</code> or <code>county</code> and <code>age</code>. See more <a href="https://www.analyticsvidhya.com/blog/2021/10/handling-missing-value/#h2_2">here</a>.</p>
+<p>We can investigate the missing data with the <code>missingno</code> package.</p>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>msno.matrix(merged)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">15</span>)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/tmp/ipykernel_14671/2359591310.py:5: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="give-directly-assessment_files/figure-html/cell-19-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<p>The white lines represent missing values. The <code>account_number</code> and <code>account_status</code> appear to have coinciding missing values, and the same for <code>age</code> and <code>time_county</code>. We can visualize these relationships with a heatmap.</p>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>msno.heatmap(merged, cmap<span class="op">=</span><span class="st">'rainbow'</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="give-directly-assessment_files/figure-html/cell-20-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>There is a strong correlation between <code>account_number</code> and <code>account_status</code> being missing, which would make sense considering that someone without an <code>account_number</code> would not have an <code>account_status</code> and vice versa. There is also a strong association between <code>age</code> and <code>time_county</code> missingness.</p>
+<p>To investigate this, let’s look at recipients with a missing <code>time_county</code>.</p>
+<div class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>time_county_missing <span class="op">=</span> merged.loc[merged.time_county.isna()]</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(time_county_missing.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    recipient_id county  time_county   age  account_number account_status  \
+69       r-00070      D          NaN  23.0     100000080.0         Active   
+70       r-00070      D          NaN  23.0     100000080.0         Active   
+182      r-00198      B          NaN   NaN     100000006.0         Active   
+183      r-00198      B          NaN   NaN     100000006.0         Active   
+184      r-00198      B          NaN   NaN     100000006.0         Active   
+
+    survey_id      date  success       stage month  
+69   s-000252  12/08/20     True  Ineligible    12  
+70   s-000280  11/10/20    False  Ineligible    11  
+182  s-000284  01/07/21    False       Start    01  
+183  s-000285  12/08/20    False       Start    12  
+184  s-000311  12/18/20    False       Start    12  </code></pre>
+</div>
+</div>
+<p>And a missing <code>age</code></p>
+<div class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>age_missing <span class="op">=</span> merged.loc[merged.age.isna()]</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(age_missing.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    recipient_id county  time_county  age  account_number account_status  \
+145      r-00060      B         28.0  NaN     100000018.0     Not Active   
+146      r-00060      B         28.0  NaN     100000018.0     Not Active   
+182      r-00198      B          NaN  NaN     100000006.0         Active   
+183      r-00198      B          NaN  NaN     100000006.0         Active   
+184      r-00198      B          NaN  NaN     100000006.0         Active   
+
+    survey_id      date  success   stage month  
+145  s-000273  11/30/20    False  Review    11  
+146  s-000455  01/29/21     True  Review    01  
+182  s-000284  01/07/21    False   Start    01  
+183  s-000285  12/08/20    False   Start    12  
+184  s-000311  12/18/20    False   Start    12  </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(time_county_missing.recipient_id.nunique())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>5</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(age_missing.recipient_id.nunique())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>4</code></pre>
+</div>
+</div>
+<p>So <code>age</code> is usually missing when <code>time_county</code> is missing. There are five recipients that did not fill in their <code>age</code> and four that did not fill in <code>time_county</code> for multiple survey attempts. They may have been uncomfortable sharing that information.</p>
+<p>Dropping these rows could lead to bias because they are not missing at random. Let’s impute the <code>age</code> and <code>time_county</code> for them. We’ll also impute the <code>county</code> and <code>account_status</code>, which are categorical variables. The imputation strategy will regress the column with missing data, say <code>age</code>, on other columns in the data. It will then use the regression coefficients to predict the missing values for <code>age</code>. More details can be found <a href="https://scikit-learn.org/stable/modules/impute.html#iterative-imputer">here</a>, <a href="https://www.analyticsvidhya.com/blog/2021/10/handling-missing-value/#h2_2">here</a>, and <a href="https://stackoverflow.com/questions/64900801/implementing-knn-imputation-on-categorical-variables-in-an-sklearn-pipeline">here</a></p>
+<p>Starting with the categorical columns, we’ll prepare the dataset for imputation by converting <code>account_status</code> and <code>county</code> to categorical codes.</p>
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>cat_cols_na <span class="op">=</span> [<span class="st">'account_status'</span>, <span class="st">'county'</span>]</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>merged[cat_cols_na] <span class="op">=</span> merged[cat_cols_na].astype(<span class="st">'category'</span>)</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>d_na <span class="op">=</span> {col: {n: cat <span class="cf">for</span> n, cat <span class="kw">in</span> <span class="bu">enumerate</span>(merged[col].cat.categories)}</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> col <span class="kw">in</span> cat_cols_na}</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>merged[cat_cols_na] <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    {col: merged[col].cat.codes <span class="cf">for</span> col <span class="kw">in</span> cat_cols_na},</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>    index<span class="op">=</span>merged.index</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(merged[cat_cols_na].head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   account_status  county
+0              -1       1
+1              -1       1
+2               1       2
+3               1       2
+4               0       2</code></pre>
+</div>
+</div>
+<p>Now we can impute the missing values.</p>
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>imp_cat <span class="op">=</span> IterativeImputer(estimator<span class="op">=</span>ExtraTreesClassifier(),</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>                            initial_strategy<span class="op">=</span><span class="st">'most_frequent'</span>,</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>                            max_iter<span class="op">=</span><span class="dv">10</span>, random_state<span class="op">=</span><span class="dv">0</span>, missing_values<span class="op">=-</span><span class="dv">1</span>)</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>merged[cat_cols_na] <span class="op">=</span> imp_cat.fit_transform(merged[cat_cols_na])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Finally, we convert the numerical codes back to their original labels</p>
+<div class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> cat_cols_na:</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>        merged[col].replace(d_na[col], inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(merged[cat_cols_na].head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  account_status county
+0         Active      B
+1         Active      B
+2     Not Active      C
+3     Not Active      C
+4         Active      C</code></pre>
+</div>
+</div>
+<p><code>age</code> and <code>time_county</code> are numeric variables, so they do not need a conversion.</p>
+<div class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>num_cols_na <span class="op">=</span> [<span class="st">'age'</span>, <span class="st">'time_county'</span>]</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>imp_num <span class="op">=</span> IterativeImputer(estimator<span class="op">=</span>ExtraTreesRegressor(),</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>                               initial_strategy<span class="op">=</span><span class="st">'median'</span>,</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>                               max_iter<span class="op">=</span><span class="dv">10</span>, random_state<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>merged[num_cols_na] <span class="op">=</span> imp_num.fit_transform(merged[num_cols_na])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now that <code>account_status</code> has been imputed, the <code>stage</code> variable can be recalculated because the six missing cases were missing because <code>account_status</code> was missing at the time of calculation.</p>
+<div class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>notActive <span class="op">=</span> merged.account_status <span class="op">==</span> <span class="st">'Not Active'</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>recipient_notActive <span class="op">=</span> merged.recipient_id[notActive]</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>merged.loc[merged.recipient_id.isin(one_success) <span class="op">&amp;</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>           merged.recipient_id.isin(recipient_yesABC) <span class="op">&amp;</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>           merged.recipient_id.isin(recipient_notActive),</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>           <span class="st">'stage'</span>] <span class="op">=</span> <span class="st">'Review'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>active <span class="op">=</span> merged.account_status <span class="op">==</span> <span class="st">'Active'</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>recipient_active <span class="op">=</span> merged.recipient_id[active]</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>merged.loc[merged.recipient_id.isin(one_success) <span class="op">&amp;</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>           merged.recipient_id.isin(recipient_yesABC) <span class="op">&amp;</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>           merged.recipient_id.isin(recipient_active), <span class="st">'stage'</span>] <span class="op">=</span> <span class="st">'Pay'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Another look at which columns contain missing data shows that there is only the <code>account_number</code> column, which can be ignored for analysis. It also would not be appropriate to impute an identifier.</p>
+<div class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>merged.isna().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="30">
+<pre><code>recipient_id      0
+county            0
+time_county       0
+age               0
+account_number    7
+account_status    0
+survey_id         0
+date              0
+success           0
+stage             0
+month             0
+dtype: int64</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<ol start="2" type="1">
+<li>The program manager has asked for data to help determine whether the field team should focus more effort on calling those in stage Start or following up to resolve issues with those in stage Review. Please write a response to the program manager, including data that may help inform the decision, and some additional factors that you would take into consideration to make the decision. Assume that the program manager’s expertise does not include interpreting data and complex analytics.&nbsp;Please limit your written response to 300 words or less.&nbsp;</li>
+</ol>
+<p>It would not make sense to calculate the chance of someone having a successful survey based on the <code>stage</code> variable because the ‘Start’ group would have no successful surveys, and the other three groups would have all recipients with at least one successful survey. On the other hand, it would be good to know the chances of someone moving from the ‘Review’ stage to a ‘Pay’ stage at a later date, for example.</p>
+<div class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check how many recipients have more than one stage</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>(merged.groupby(<span class="st">'recipient_id'</span>)[<span class="st">'stage'</span>].nunique() <span class="op">&gt;</span> <span class="dv">1</span>).<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="31">
+<pre><code>0</code></pre>
+</div>
+</div>
+<p>There do not appear to be recipients that have changed their <code>stage</code>. Let’s check for recipients that have changed from ‘Not Active’ to ‘Active’ <code>account_status</code>.</p>
+<div class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>(merged.groupby(<span class="st">'recipient_id'</span>)[<span class="st">'account_status'</span>].nunique() <span class="op">&gt;</span> <span class="dv">1</span>).<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="32">
+<pre><code>0</code></pre>
+</div>
+</div>
+<p>No recipients have changed from ‘Not Active’ to ‘Active’ <code>account_status</code> either.</p>
+<p>One thing to consider is that the ‘Start’ group has 150 recipients compared to only 35 in the ‘Review’ group. The ‘Start’ group success rate only needs to be 35/150 ~ 23% to match a 100% success rate in the ‘Review’ group. It would be good to look up historical data on the conversion rate from ‘Start’ to ‘Pay’ versus ‘Review’ to ‘Pay’. Data on the cost of converting the ‘Start’ group versus the ‘Review’ group would also be helpful for the decision.</p>
+<div class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>merged.stage.value_counts(dropna<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="33">
+<pre><code>Pay           215
+Start         150
+Ineligible     70
+Review         35
+Name: stage, dtype: int64</code></pre>
+</div>
+</div>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<ol start="3" type="1">
+<li>The country director is considering investing resources into proactively conducting in-person surveys with recipients <em>in the highest age group</em> across projects to increase overall survey success rate. They believe that this additional cost might outweigh the current costs of repeated failed phone survey attempts, if we can accurately target those recipients <em>least likely</em> to respond to a phone survey.&nbsp;
+<ol type="1">
+<li>What analysis would you provide from the provided project data to help make this decision? Please provide the calculation(s) in the spreadsheet or code that you submit.</li>
+<li>Are there other factors that might explain the observed survey success rate from this project? Please use your judgment to determine these factors and limit your written response to 400 words or less.&nbsp;</li>
+</ol></li>
+</ol>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">3.1</h3>
+<p>Let’s graph the relationship between <code>age</code> and at least one successful survey.</p>
+<div class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>merged[<span class="st">'one_success'</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>merged.loc[merged.recipient_id.isin(one_success), <span class="st">'one_success'</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create bins for age broken into quartiles</span></span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>merged[<span class="st">'age_bin'</span>] <span class="op">=</span> pd.qcut(merged.age, q<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>age_success <span class="op">=</span> merged.groupby(<span class="st">'age_bin'</span>)[<span class="st">'one_success'</span>].<span class="bu">sum</span>()</span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> merged.groupby(<span class="st">'age_bin'</span>)[<span class="st">'one_success'</span>].count()</span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> age_success.div(age, level<span class="op">=</span><span class="st">'age_bin'</span>) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a>results.plot(kind<span class="op">=</span><span class="st">'bar'</span>)</span>
+<span id="cb51-13"><a href="#cb51-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-14"><a href="#cb51-14" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb51-15"><a href="#cb51-15" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Age Group'</span>)</span>
+<span id="cb51-16"><a href="#cb51-16" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'</span><span class="sc">% o</span><span class="st">f recipients with at least</span><span class="ch">\n</span><span class="st"> one successful survey'</span>)</span>
+<span id="cb51-17"><a href="#cb51-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="give-directly-assessment_files/figure-html/cell-35-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>People in the highest age group are the least likely to have at least one successful survey.</p>
+<p>Running logistic regression gives</p>
+<div class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>logit <span class="op">=</span> smf.logit(<span class="st">'one_success ~ age'</span>, data<span class="op">=</span>merged).fit()</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(logit.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Optimization terminated successfully.
+         Current function value: 0.278114
+         Iterations 7
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:            one_success   No. Observations:                  470
+Model:                          Logit   Df Residuals:                      468
+Method:                           MLE   Df Model:                            1
+Date:                Wed, 08 Jun 2022   Pseudo R-squ.:                  0.5559
+Time:                        13:10:08   Log-Likelihood:                -130.71
+converged:                       True   LL-Null:                       -294.33
+Covariance Type:            nonrobust   LLR p-value:                 3.865e-73
+==============================================================================
+                 coef    std err          z      P&gt;|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      7.8313      0.615     12.744      0.000       6.627       9.036
+age           -0.1740      0.014    -12.308      0.000      -0.202      -0.146
+==============================================================================</code></pre>
+</div>
+</div>
+<p>There is a negative relationship between <code>age</code> and the chance of at least one successful survey. The coefficient is also statistically significant. To interpret it, we calculate the odds ratio.</p>
+<div class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>odds_ratios <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>        <span class="st">'OR'</span>: logit.params, </span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Lower CI'</span>: logit.conf_int()[<span class="dv">0</span>],</span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Upper CI'</span>: logit.conf_int()[<span class="dv">1</span>]</span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>odds_ratios <span class="op">=</span> pd.np.exp(odds_ratios)</span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(odds_ratios)</span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>((odds_ratios[<span class="st">'OR'</span>][<span class="dv">1</span>] <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> <span class="dv">100</span>, <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                    OR    Lower CI     Upper CI
+Intercept  2518.096539  755.093254  8397.386877
+age           0.840278    0.817312     0.863888
+-15.97</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/tmp/ipykernel_14671/4211037893.py:7: FutureWarning: The pandas.np module is deprecated and will be removed from pandas in a future version. Import numpy directly instead.
+  odds_ratios = pd.np.exp(odds_ratios)</code></pre>
+</div>
+</div>
+<p>Each additional increase of one year in age is associated with a roughly 16 percent decrease in odds of having at least one successful survey.</p>
+<p>So far, it appears that older recipients are less likely to respond to surveys. Focusing on the older recipients would help target those with lower response rates.</p>
+</section>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1">3.2</h3>
+<p>We include other variables in our logistic regression to check for confounders.</p>
+<div class="cell" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>big_logit <span class="op">=</span> smf.logit(<span class="st">'one_success ~ time_county + age + C(month) + C(account_status)'</span>, data<span class="op">=</span>merged).fit()</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(big_logit.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Warning: Maximum number of iterations has been exceeded.
+         Current function value: 0.074409
+         Iterations: 35
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:            one_success   No. Observations:                  470
+Model:                          Logit   Df Residuals:                      464
+Method:                           MLE   Df Model:                            5
+Date:                Wed, 08 Jun 2022   Pseudo R-squ.:                  0.8812
+Time:                        13:10:08   Log-Likelihood:                -34.972
+converged:                      False   LL-Null:                       -294.33
+Covariance Type:            nonrobust   LLR p-value:                7.306e-110
+===================================================================================================
+                                      coef    std err          z      P&gt;|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+Intercept                          10.2072      2.959      3.449      0.001       4.407      16.007
+C(month)[T.11]                     24.6815   8.53e+04      0.000      1.000   -1.67e+05    1.67e+05
+C(month)[T.12]                     -0.3861      0.670     -0.576      0.564      -1.699       0.927
+C(account_status)[T.Not Active]    30.8016   4900.380      0.006      0.995   -9573.767    9635.370
+time_county                         0.1367      0.069      1.967      0.049       0.001       0.273
+age                                -0.3718      0.093     -4.019      0.000      -0.553      -0.190
+===================================================================================================
+
+Possibly complete quasi-separation: A fraction 0.54 of observations can be
+perfectly predicted. This might indicate that there is complete
+quasi-separation. In this case some parameters will not be identified.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/home/dylan/give-directly-exercise/.venv/lib/python3.8/site-packages/statsmodels/base/model.py:604: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "</code></pre>
+</div>
+</div>
+<p>When <code>time_county</code>, <code>month</code>, and <code>account_status</code> are included along with <code>age</code>, <code>age</code> and <code>time_county</code> are still significant predictors. We can also look at other feature selection methods.</p>
+<p>Logistic regression can also be used to <a href="https://towardsdatascience.com/feature-selection-with-pandas-e3690ad8504b">select features</a> based on their importance in predicting at least one successful survey.</p>
+<div class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> LogisticRegressionCV()</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>cat_cols <span class="op">=</span> [<span class="st">'month'</span>, <span class="st">'account_status'</span>, <span class="st">'county'</span>]</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>num_cols <span class="op">=</span> [<span class="st">'age'</span>, <span class="st">'time_county'</span>]</span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> defaultdict(LabelEncoder)</span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a>le_fit <span class="op">=</span> merged[cat_cols].<span class="bu">apply</span>(<span class="kw">lambda</span> x: d[x.name].fit_transform(x))</span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> pd.concat((merged[num_cols], le_fit), axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> merged[<span class="st">'one_success'</span>]</span>
+<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> StandardScaler()</span>
+<span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a>X_scaled <span class="op">=</span> scaler.fit_transform(X)</span>
+<span id="cb60-11"><a href="#cb60-11" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(</span>
+<span id="cb60-12"><a href="#cb60-12" aria-hidden="true" tabindex="-1"></a>    X_scaled, y, test_size<span class="op">=</span><span class="fl">0.3</span>, random_state<span class="op">=</span><span class="dv">42</span></span>
+<span id="cb60-13"><a href="#cb60-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb60-14"><a href="#cb60-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-15"><a href="#cb60-15" aria-hidden="true" tabindex="-1"></a>reg.fit(X_train, y_train)</span>
+<span id="cb60-16"><a href="#cb60-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Best accuracy score using built-in LogisticRegCV: </span><span class="sc">%f</span><span class="st">"</span> <span class="op">%</span> reg.score(X_test, y_test))</span>
+<span id="cb60-17"><a href="#cb60-17" aria-hidden="true" tabindex="-1"></a>coef <span class="op">=</span> pd.Series(reg.coef_.flatten(), index<span class="op">=</span>X.columns)</span>
+<span id="cb60-18"><a href="#cb60-18" aria-hidden="true" tabindex="-1"></a>imp_coef <span class="op">=</span> coef.sort_values()</span>
+<span id="cb60-19"><a href="#cb60-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-20"><a href="#cb60-20" aria-hidden="true" tabindex="-1"></a>imp_coef.plot(kind<span class="op">=</span><span class="st">"barh"</span>)</span>
+<span id="cb60-21"><a href="#cb60-21" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Feature importance using Logistic Regression Model"</span>)</span>
+<span id="cb60-22"><a href="#cb60-22" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb60-23"><a href="#cb60-23" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Best accuracy score using built-in LogisticRegCV: 0.992908</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="give-directly-assessment_files/figure-html/cell-39-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<p>It appears that the account_status and age have the largest effect on whether a survey is successful. <code>age</code> has a negative effect however. Recall that <code>account_status</code> and <code>age</code> are correlated.</p>
+<div class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>merged.groupby(<span class="st">'account_status'</span>)[<span class="st">'age'</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="39">
+<pre><code>account_status
+Active        36.535321
+Not Active    46.908571
+Name: age, dtype: float64</code></pre>
+</div>
+</div>
+<p>The ‘Not Active’ group is slightly older. A test of the equality of group means can confirm this. The null hypothesis is that the means are equal.</p>
+<div class="cell" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>active_age <span class="op">=</span> merged.age[merged.account_status <span class="op">==</span> <span class="st">'Active'</span>]</span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>notactive_age <span class="op">=</span> merged.age[merged.account_status <span class="op">==</span> <span class="st">'Not Active'</span>]</span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(CompareMeans.from_data(active_age, notactive_age).ttest_ind())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(-4.194989773330013, 3.265347532278871e-05, 468.0)</code></pre>
+</div>
+</div>
+<p>The p-value is close to zero, rejecting the null hypothesis that the means of the two groups are equal. So there is a statistically significant difference between the ages of ‘Active’ and ‘Not Active’ recipients.</p>
+<p>Let’s now use a tree-based classifier for comparison.</p>
+<div class="cell" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>reg_extra_tree <span class="op">=</span> ExtraTreesClassifier(n_estimators<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>reg_extra_tree.fit(X_train, y_train)</span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>feat_imp <span class="op">=</span> pd.Series(</span>
+<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a>    reg_extra_tree.feature_importances_,</span>
+<span id="cb66-5"><a href="#cb66-5" aria-hidden="true" tabindex="-1"></a>    index<span class="op">=</span>X.columns</span>
+<span id="cb66-6"><a href="#cb66-6" aria-hidden="true" tabindex="-1"></a>).sort_values()</span>
+<span id="cb66-7"><a href="#cb66-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Mean accuracy on test data is </span><span class="sc">{</span>reg_extra_tree<span class="sc">.</span>score(X_test, y_test)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb66-8"><a href="#cb66-8" aria-hidden="true" tabindex="-1"></a>feat_imp.plot(kind<span class="op">=</span><span class="st">"barh"</span>)</span>
+<span id="cb66-9"><a href="#cb66-9" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Feature importance using Extra Tree Classifier"</span>)</span>
+<span id="cb66-10"><a href="#cb66-10" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb66-11"><a href="#cb66-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mean accuracy on test data is 1.0</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="give-directly-assessment_files/figure-html/cell-42-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<p>This time the model has <code>age</code> as the most important effect, with <code>time_county</code> as a close second. All of the features are chosen by the model, however. Note that there is randomness in the model, so sometimes the features will be ranked differently across different runs. But the model will still choose features important for prediction.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
