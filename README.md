@@ -1,2 +1,2 @@
-# a-few-notes-blog
-Code for the blog. Produced with [Quarto](https://quarto.org/).
+# A few notes
+A blog produced with [Quarto](https://quarto.org/).
