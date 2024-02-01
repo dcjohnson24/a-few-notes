@@ -1,1 +1,1 @@
-Sitemap: https://github.com/dcjohnson24/a-few-notes/sitemap.xml
+Sitemap: https://dcjohnson24.github.io/a-few-notes/sitemap.xml

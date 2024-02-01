@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -23,7 +23,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -58,7 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -80,7 +80,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -89,13 +95,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
@@ -105,10 +112,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">A few notes</span>
     </a>
@@ -120,18 +127,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/dcjohnson24" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/dcjohnson24"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -173,6 +180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+
 <section id="givedirectly-take-home-assessment" class="level1">
 <h1>GiveDirectly Take Home Assessment</h1>
 <p>This was a take home assessment I did for GiveDirectly in June 2022. I was given 2.5 hours to complete the assignment. The csv files and instructions can be found <a href="https://github.com/dcjohnson24/give-directly-interview">here</a>.</p>
@@ -187,7 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol></li>
 </ol>
 <p>First install the required packages.</p>
-<div class="cell" data-execution_count="1">
+<div id="cell-6" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>r requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Requirement already satisfied: pandas==1.4.2 in ./.venv/lib/python3.8/site-packages (from -r requirements.txt (line 1)) (1.4.2)
@@ -292,7 +300,7 @@ Requirement already satisfied: pycparser in ./.venv/lib/python3.8/site-packages 
 </div>
 </div>
 <p>Import the required libraries.</p>
-<div class="cell" data-execution_count="2">
+<div id="cell-8" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
@@ -310,7 +318,7 @@ Requirement already satisfied: pycparser in ./.venv/lib/python3.8/site-packages 
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> defaultdict</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s now import the two datasets and merge them.</p>
-<div class="cell" data-execution_count="3">
+<div id="cell-10" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>recipients <span class="op">=</span> pd.read_csv(<span class="st">'recipients.csv'</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>attempts <span class="op">=</span> pd.read_csv(<span class="st">'survey_attempts.csv'</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>merged <span class="op">=</span> pd.merge(recipients, attempts, on<span class="op">=</span><span class="st">'recipient_id'</span>, how<span class="op">=</span><span class="st">'left'</span>, indicator<span class="op">=</span><span class="va">True</span>)</span>
@@ -323,11 +331,11 @@ Name: _merge, dtype: int64</code></pre>
 </div>
 </div>
 <p>It looks like all the recipients are matched with survey attempts. We can drop the <code>_merge</code> variable.</p>
-<div class="cell" data-execution_count="4">
+<div id="cell-12" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>merged.drop(columns<span class="op">=</span><span class="st">'_merge'</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A quick glance at our data.</p>
-<div class="cell" data-execution_count="5">
+<div id="cell-14" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>merged.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
@@ -476,7 +484,7 @@ Name: _merge, dtype: int64</code></pre>
 </div>
 </div>
 <p>Check for duplicates. We expect that <code>recipient_id</code> and <code>survey_id</code> together form a unique id.</p>
-<div class="cell" data-execution_count="6">
+<div id="cell-16" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>merged[merged.duplicated(subset<span class="op">=</span>[<span class="st">'recipient_id'</span>, <span class="st">'survey_id'</span>], keep<span class="op">=</span><span class="va">False</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <div>
@@ -638,11 +646,11 @@ Name: _merge, dtype: int64</code></pre>
 </div>
 </div>
 <p>There are 50 pairs of duplicates that need to be dropped.</p>
-<div class="cell" data-execution_count="7">
+<div id="cell-18" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>merged <span class="op">=</span> merged.drop_duplicates(subset<span class="op">=</span>[<span class="st">'recipient_id'</span>, <span class="st">'survey_id'</span>], keep<span class="op">=</span><span class="st">'first'</span>).reset_index(drop<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s now calculate the stage variable, starting with ‘Start’.</p>
-<div class="cell" data-execution_count="8">
+<div id="cell-20" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> merged.groupby(<span class="st">'recipient_id'</span>)[<span class="st">'success'</span>].<span class="bu">any</span>()</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>one_success <span class="op">=</span> [mask.index[i] <span class="cf">for</span> i, m <span class="kw">in</span> <span class="bu">enumerate</span>(mask) <span class="cf">if</span> m]</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the value to start for those with no successful surveys. '~' negates the value </span></span>
@@ -650,7 +658,7 @@ Name: _merge, dtype: int64</code></pre>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>merged.loc[<span class="op">~</span>merged.recipient_id.isin(one_success), <span class="st">'stage'</span>] <span class="op">=</span> <span class="st">'Start'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Next, the ‘Ineligible’ stage</p>
-<div class="cell" data-execution_count="9">
+<div id="cell-22" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove the text 'County' from the column</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>merged.county <span class="op">=</span> merged.county.<span class="bu">str</span>.replace(<span class="st">'County '</span>, <span class="st">''</span>, regex<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    </span>
@@ -661,7 +669,7 @@ Name: _merge, dtype: int64</code></pre>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    merged.recipient_id.isin(recipient_noABC), <span class="st">'stage'</span>] <span class="op">=</span> <span class="st">'Ineligible'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The ‘Review’ stage</p>
-<div class="cell" data-execution_count="10">
+<div id="cell-24" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>recipient_yesABC <span class="op">=</span> merged.recipient_id[inABC]</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>notActive <span class="op">=</span> merged.account_status <span class="op">==</span> <span class="st">'Not Active'</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>recipient_notActive <span class="op">=</span> merged.recipient_id[notActive]</span>
@@ -672,7 +680,7 @@ Name: _merge, dtype: int64</code></pre>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>           <span class="st">'stage'</span>] <span class="op">=</span> <span class="st">'Review'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>And finally the ‘Pay’ stage</p>
-<div class="cell" data-execution_count="11">
+<div id="cell-26" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>active <span class="op">=</span> merged.account_status <span class="op">==</span> <span class="st">'Active'</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>recipient_active <span class="op">=</span> merged.recipient_id[active]</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>merged.loc[merged.recipient_id.isin(one_success) <span class="op">&amp;</span></span>
@@ -681,7 +689,7 @@ Name: _merge, dtype: int64</code></pre>
 </div>
 <section id="how-many-recipients-in-each-stage" class="level3">
 <h3 class="anchored" data-anchor-id="how-many-recipients-in-each-stage">1.1 How many recipients in each stage?</h3>
-<div class="cell" data-execution_count="12">
+<div id="cell-28" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>merged.stage.value_counts(dropna<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>Pay           209
@@ -693,7 +701,7 @@ Name: stage, dtype: int64</code></pre>
 </div>
 </div>
 <p>There are 209 in the ‘Pay’ stage, 150 in the ‘Start’, 70 ‘Ineligible’, 35 in ‘Review’, and 6 not in any stage. This is because there are 6 recipients with a missing <code>account_status</code>.</p>
-<div class="cell" data-execution_count="13">
+<div id="cell-30" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>merged.loc[merged.stage.isna()]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <div>
@@ -804,7 +812,7 @@ Name: stage, dtype: int64</code></pre>
 </section>
 <section id="how-many-successful-surveys-in-december" class="level3">
 <h3 class="anchored" data-anchor-id="how-many-successful-surveys-in-december">1.2 How many successful surveys in December?</h3>
-<div class="cell" data-execution_count="14">
+<div id="cell-33" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>merged[<span class="st">'month'</span>] <span class="op">=</span> merged[<span class="st">'date'</span>].astype(<span class="bu">str</span>).<span class="bu">str</span>[:<span class="dv">2</span>]</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>merged.groupby(<span class="st">'month'</span>)[<span class="st">'success'</span>].<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
@@ -820,7 +828,7 @@ Name: success, dtype: int64</code></pre>
 <section id="abnormalities-in-the-source-data" class="level3">
 <h3 class="anchored" data-anchor-id="abnormalities-in-the-source-data">1.3 Abnormalities in the source data</h3>
 <p>There were duplicates in the data that had to be dropped. Some values also did not make much sense and were assgined missing value. The missing data was later imputed.</p>
-<div class="cell" data-execution_count="15">
+<div id="cell-37" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>merged.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <div>
@@ -891,7 +899,7 @@ Name: success, dtype: int64</code></pre>
 </div>
 </div>
 <p><code>time_county</code> has a minimum of -45 and <code>age</code> has a max of 9999. To deal with these problematic cases, I replace them with missing values to be imputed later. It could also be good to follow up with other teams on the correct value.</p>
-<div class="cell" data-execution_count="16">
+<div id="cell-39" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>merged.age[merged.age <span class="op">==</span> <span class="dv">9999</span>] <span class="op">=</span> pd.np.nan </span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>merged.time_county[merged.time_county <span class="op">&lt;</span> <span class="dv">0</span>] <span class="op">=</span> pd.np.nan</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -913,7 +921,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 <p>There are missing values in the data as well. Six columns have missing data.</p>
-<div class="cell" data-execution_count="17">
+<div id="cell-41" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>merged.isna().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>recipient_id       0
@@ -934,7 +942,7 @@ dtype: int64</code></pre>
 <p>If there are many missing values in a row, the row can be deleted. Likewise, if there are many missing values in a column, the column can be deleted.</p>
 <p>Imputation can be as simple as replacing the missing value in a column with an arbitrary value such as ‘0’ or the column mean or mode. Other techniques take into account the values in other columns. Suppose a recipient has a missing <code>age</code>, but lives in a certain county and has also responded to the survey. Then the <code>age</code> might be imputed to be slightly lower because of a correlation between <code>success</code> and <code>age</code> or <code>county</code> and <code>age</code>. See more <a href="https://www.analyticsvidhya.com/blog/2021/10/handling-missing-value/#h2_2">here</a>.</p>
 <p>We can investigate the missing data with the <code>missingno</code> package.</p>
-<div class="cell" data-execution_count="18">
+<div id="cell-44" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>msno.matrix(merged)</span>
@@ -946,23 +954,31 @@ dtype: int64</code></pre>
   plt.tight_layout()</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="give-directly-assessment_files/figure-html/cell-19-output-2.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="give-directly-assessment_files/figure-html/cell-19-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>The white lines represent missing values. The <code>account_number</code> and <code>account_status</code> appear to have coinciding missing values, and the same for <code>age</code> and <code>time_county</code>. We can visualize these relationships with a heatmap.</p>
-<div class="cell" data-execution_count="19">
+<div id="cell-46" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>msno.heatmap(merged, cmap<span class="op">=</span><span class="st">'rainbow'</span>)</span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
 <span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="give-directly-assessment_files/figure-html/cell-20-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="give-directly-assessment_files/figure-html/cell-20-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>There is a strong correlation between <code>account_number</code> and <code>account_status</code> being missing, which would make sense considering that someone without an <code>account_number</code> would not have an <code>account_status</code> and vice versa. There is also a strong association between <code>age</code> and <code>time_county</code> missingness.</p>
 <p>To investigate this, let’s look at recipients with a missing <code>time_county</code>.</p>
-<div class="cell" data-execution_count="20">
+<div id="cell-48" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>time_county_missing <span class="op">=</span> merged.loc[merged.time_county.isna()]</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(time_county_missing.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -982,7 +998,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 <p>And a missing <code>age</code></p>
-<div class="cell" data-execution_count="21">
+<div id="cell-50" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>age_missing <span class="op">=</span> merged.loc[merged.age.isna()]</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(age_missing.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1001,13 +1017,13 @@ dtype: int64</code></pre>
 184  s-000311  12/18/20    False   Start    12  </code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="22">
+<div id="cell-51" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(time_county_missing.recipient_id.nunique())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>5</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="23">
+<div id="cell-52" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(age_missing.recipient_id.nunique())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>4</code></pre>
@@ -1016,7 +1032,7 @@ dtype: int64</code></pre>
 <p>So <code>age</code> is usually missing when <code>time_county</code> is missing. There are five recipients that did not fill in their <code>age</code> and four that did not fill in <code>time_county</code> for multiple survey attempts. They may have been uncomfortable sharing that information.</p>
 <p>Dropping these rows could lead to bias because they are not missing at random. Let’s impute the <code>age</code> and <code>time_county</code> for them. We’ll also impute the <code>county</code> and <code>account_status</code>, which are categorical variables. The imputation strategy will regress the column with missing data, say <code>age</code>, on other columns in the data. It will then use the regression coefficients to predict the missing values for <code>age</code>. More details can be found <a href="https://scikit-learn.org/stable/modules/impute.html#iterative-imputer">here</a>, <a href="https://www.analyticsvidhya.com/blog/2021/10/handling-missing-value/#h2_2">here</a>, and <a href="https://stackoverflow.com/questions/64900801/implementing-knn-imputation-on-categorical-variables-in-an-sklearn-pipeline">here</a></p>
 <p>Starting with the categorical columns, we’ll prepare the dataset for imputation by converting <code>account_status</code> and <code>county</code> to categorical codes.</p>
-<div class="cell" data-execution_count="24">
+<div id="cell-56" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>cat_cols_na <span class="op">=</span> [<span class="st">'account_status'</span>, <span class="st">'county'</span>]</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>merged[cat_cols_na] <span class="op">=</span> merged[cat_cols_na].astype(<span class="st">'category'</span>)</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>d_na <span class="op">=</span> {col: {n: cat <span class="cf">for</span> n, cat <span class="kw">in</span> <span class="bu">enumerate</span>(merged[col].cat.categories)}</span>
@@ -1036,7 +1052,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 <p>Now we can impute the missing values.</p>
-<div class="cell" data-execution_count="25">
+<div id="cell-58" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>imp_cat <span class="op">=</span> IterativeImputer(estimator<span class="op">=</span>ExtraTreesClassifier(),</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>                            initial_strategy<span class="op">=</span><span class="st">'most_frequent'</span>,</span>
@@ -1046,7 +1062,7 @@ dtype: int64</code></pre>
 <span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>merged[cat_cols_na] <span class="op">=</span> imp_cat.fit_transform(merged[cat_cols_na])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Finally, we convert the numerical codes back to their original labels</p>
-<div class="cell" data-execution_count="26">
+<div id="cell-60" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> cat_cols_na:</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>        merged[col].replace(d_na[col], inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(merged[cat_cols_na].head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1060,7 +1076,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 <p><code>age</code> and <code>time_county</code> are numeric variables, so they do not need a conversion.</p>
-<div class="cell" data-execution_count="27">
+<div id="cell-62" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>num_cols_na <span class="op">=</span> [<span class="st">'age'</span>, <span class="st">'time_county'</span>]</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>imp_num <span class="op">=</span> IterativeImputer(estimator<span class="op">=</span>ExtraTreesRegressor(),</span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>                               initial_strategy<span class="op">=</span><span class="st">'median'</span>,</span>
@@ -1068,7 +1084,7 @@ dtype: int64</code></pre>
 <span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>merged[num_cols_na] <span class="op">=</span> imp_num.fit_transform(merged[num_cols_na])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now that <code>account_status</code> has been imputed, the <code>stage</code> variable can be recalculated because the six missing cases were missing because <code>account_status</code> was missing at the time of calculation.</p>
-<div class="cell" data-execution_count="28">
+<div id="cell-64" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>notActive <span class="op">=</span> merged.account_status <span class="op">==</span> <span class="st">'Not Active'</span></span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>recipient_notActive <span class="op">=</span> merged.recipient_id[notActive]</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1077,7 +1093,7 @@ dtype: int64</code></pre>
 <span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>           merged.recipient_id.isin(recipient_notActive),</span>
 <span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>           <span class="st">'stage'</span>] <span class="op">=</span> <span class="st">'Review'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="29">
+<div id="cell-65" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>active <span class="op">=</span> merged.account_status <span class="op">==</span> <span class="st">'Active'</span></span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>recipient_active <span class="op">=</span> merged.recipient_id[active]</span>
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>merged.loc[merged.recipient_id.isin(one_success) <span class="op">&amp;</span></span>
@@ -1085,7 +1101,7 @@ dtype: int64</code></pre>
 <span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>           merged.recipient_id.isin(recipient_active), <span class="st">'stage'</span>] <span class="op">=</span> <span class="st">'Pay'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Another look at which columns contain missing data shows that there is only the <code>account_number</code> column, which can be ignored for analysis. It also would not be appropriate to impute an identifier.</p>
-<div class="cell" data-execution_count="30">
+<div id="cell-67" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>merged.isna().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
 <pre><code>recipient_id      0
@@ -1110,7 +1126,7 @@ dtype: int64</code></pre>
 <li>The program manager has asked for data to help determine whether the field team should focus more effort on calling those in stage Start or following up to resolve issues with those in stage Review. Please write a response to the program manager, including data that may help inform the decision, and some additional factors that you would take into consideration to make the decision. Assume that the program manager’s expertise does not include interpreting data and complex analytics.&nbsp;Please limit your written response to 300 words or less.&nbsp;</li>
 </ol>
 <p>It would not make sense to calculate the chance of someone having a successful survey based on the <code>stage</code> variable because the ‘Start’ group would have no successful surveys, and the other three groups would have all recipients with at least one successful survey. On the other hand, it would be good to know the chances of someone moving from the ‘Review’ stage to a ‘Pay’ stage at a later date, for example.</p>
-<div class="cell" data-execution_count="31">
+<div id="cell-71" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check how many recipients have more than one stage</span></span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>(merged.groupby(<span class="st">'recipient_id'</span>)[<span class="st">'stage'</span>].nunique() <span class="op">&gt;</span> <span class="dv">1</span>).<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="31">
@@ -1118,7 +1134,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 <p>There do not appear to be recipients that have changed their <code>stage</code>. Let’s check for recipients that have changed from ‘Not Active’ to ‘Active’ <code>account_status</code>.</p>
-<div class="cell" data-execution_count="32">
+<div id="cell-73" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>(merged.groupby(<span class="st">'recipient_id'</span>)[<span class="st">'account_status'</span>].nunique() <span class="op">&gt;</span> <span class="dv">1</span>).<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="32">
 <pre><code>0</code></pre>
@@ -1126,7 +1142,7 @@ dtype: int64</code></pre>
 </div>
 <p>No recipients have changed from ‘Not Active’ to ‘Active’ <code>account_status</code> either.</p>
 <p>One thing to consider is that the ‘Start’ group has 150 recipients compared to only 35 in the ‘Review’ group. The ‘Start’ group success rate only needs to be 35/150 ~ 23% to match a 100% success rate in the ‘Review’ group. It would be good to look up historical data on the conversion rate from ‘Start’ to ‘Pay’ versus ‘Review’ to ‘Pay’. Data on the cost of converting the ‘Start’ group versus the ‘Review’ group would also be helpful for the decision.</p>
-<div class="cell" data-execution_count="33">
+<div id="cell-76" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>merged.stage.value_counts(dropna<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="33">
 <pre><code>Pay           215
@@ -1149,7 +1165,7 @@ Name: stage, dtype: int64</code></pre>
 <section id="section" class="level3">
 <h3 class="anchored" data-anchor-id="section">3.1</h3>
 <p>Let’s graph the relationship between <code>age</code> and at least one successful survey.</p>
-<div class="cell" data-execution_count="34">
+<div id="cell-81" class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>merged[<span class="st">'one_success'</span>] <span class="op">=</span> <span class="dv">0</span></span>
@@ -1168,12 +1184,16 @@ Name: stage, dtype: int64</code></pre>
 <span id="cb51-16"><a href="#cb51-16" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'</span><span class="sc">% o</span><span class="st">f recipients with at least</span><span class="ch">\n</span><span class="st"> one successful survey'</span>)</span>
 <span id="cb51-17"><a href="#cb51-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="give-directly-assessment_files/figure-html/cell-35-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="give-directly-assessment_files/figure-html/cell-35-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>People in the highest age group are the least likely to have at least one successful survey.</p>
 <p>Running logistic regression gives</p>
-<div class="cell" data-execution_count="35">
+<div id="cell-84" class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>logit <span class="op">=</span> smf.logit(<span class="st">'one_success ~ age'</span>, data<span class="op">=</span>merged).fit()</span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(logit.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1198,7 +1218,7 @@ age           -0.1740      0.014    -12.308      0.000      -0.202      -0.146
 </div>
 </div>
 <p>There is a negative relationship between <code>age</code> and the chance of at least one successful survey. The coefficient is also statistically significant. To interpret it, we calculate the odds ratio.</p>
-<div class="cell" data-execution_count="36">
+<div id="cell-86" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>odds_ratios <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>        <span class="st">'OR'</span>: logit.params, </span>
 <span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Lower CI'</span>: logit.conf_int()[<span class="dv">0</span>],</span>
@@ -1225,7 +1245,7 @@ age           0.840278    0.817312     0.863888
 <section id="section-1" class="level3">
 <h3 class="anchored" data-anchor-id="section-1">3.2</h3>
 <p>We include other variables in our logistic regression to check for confounders.</p>
-<div class="cell" data-execution_count="37">
+<div id="cell-90" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>big_logit <span class="op">=</span> smf.logit(<span class="st">'one_success ~ time_county + age + C(month) + C(account_status)'</span>, data<span class="op">=</span>merged).fit()</span>
 <span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(big_logit.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1263,7 +1283,7 @@ quasi-separation. In this case some parameters will not be identified.</code></p
 </div>
 <p>When <code>time_county</code>, <code>month</code>, and <code>account_status</code> are included along with <code>age</code>, <code>age</code> and <code>time_county</code> are still significant predictors. We can also look at other feature selection methods.</p>
 <p>Logistic regression can also be used to <a href="https://towardsdatascience.com/feature-selection-with-pandas-e3690ad8504b">select features</a> based on their importance in predicting at least one successful survey.</p>
-<div class="cell" data-execution_count="38">
+<div id="cell-93" class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> LogisticRegressionCV()</span>
 <span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>cat_cols <span class="op">=</span> [<span class="st">'month'</span>, <span class="st">'account_status'</span>, <span class="st">'county'</span>]</span>
 <span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>num_cols <span class="op">=</span> [<span class="st">'age'</span>, <span class="st">'time_county'</span>]</span>
@@ -1291,11 +1311,15 @@ quasi-separation. In this case some parameters will not be identified.</code></p
 <pre><code>Best accuracy score using built-in LogisticRegCV: 0.992908</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="give-directly-assessment_files/figure-html/cell-39-output-2.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="give-directly-assessment_files/figure-html/cell-39-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>It appears that the account_status and age have the largest effect on whether a survey is successful. <code>age</code> has a negative effect however. Recall that <code>account_status</code> and <code>age</code> are correlated.</p>
-<div class="cell" data-execution_count="39">
+<div id="cell-95" class="cell" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>merged.groupby(<span class="st">'account_status'</span>)[<span class="st">'age'</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="39">
 <pre><code>account_status
@@ -1305,7 +1329,7 @@ Name: age, dtype: float64</code></pre>
 </div>
 </div>
 <p>The ‘Not Active’ group is slightly older. A test of the equality of group means can confirm this. The null hypothesis is that the means are equal.</p>
-<div class="cell" data-execution_count="40">
+<div id="cell-97" class="cell" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>active_age <span class="op">=</span> merged.age[merged.account_status <span class="op">==</span> <span class="st">'Active'</span>]</span>
 <span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>notactive_age <span class="op">=</span> merged.age[merged.account_status <span class="op">==</span> <span class="st">'Not Active'</span>]</span>
 <span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(CompareMeans.from_data(active_age, notactive_age).ttest_ind())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1315,7 +1339,7 @@ Name: age, dtype: float64</code></pre>
 </div>
 <p>The p-value is close to zero, rejecting the null hypothesis that the means of the two groups are equal. So there is a statistically significant difference between the ages of ‘Active’ and ‘Not Active’ recipients.</p>
 <p>Let’s now use a tree-based classifier for comparison.</p>
-<div class="cell" data-execution_count="41">
+<div id="cell-100" class="cell" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>reg_extra_tree <span class="op">=</span> ExtraTreesClassifier(n_estimators<span class="op">=</span><span class="dv">10</span>)</span>
 <span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>reg_extra_tree.fit(X_train, y_train)</span>
 <span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>feat_imp <span class="op">=</span> pd.Series(</span>
@@ -1331,7 +1355,11 @@ Name: age, dtype: float64</code></pre>
 <pre><code>Mean accuracy on test data is 1.0</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="give-directly-assessment_files/figure-html/cell-42-output-2.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="give-directly-assessment_files/figure-html/cell-42-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>This time the model has <code>age</code> as the most important effect, with <code>time_county</code> as a close second. All of the features are chosen by the model, however. Note that there is randomness in the model, so sometimes the features will be ranked differently across different runs. But the model will still choose features important for prediction.</p>
@@ -1421,10 +1449,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1434,8 +1461,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1448,6 +1484,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1491,6 +1646,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1516,6 +1672,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1576,6 +1758,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
